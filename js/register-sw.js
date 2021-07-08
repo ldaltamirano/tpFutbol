@@ -25,7 +25,7 @@ window.addEventListener('online', event => {
 // Es decir, no se disparo los eventos de arriba aun, y necesito conocer el estado.
 // 
 
-if (!navigator.onLine) {
-  document.querySelector('body').classList.add('offline');
-  main.innerHTML = "No obtener los partidos! La aplicacion esta offline!"
-}
+// if (!navigator.onLine) {
+//   document.querySelector('body').classList.add('offline');
+//   main.innerHTML = "No obtener los partidos! La aplicacion esta offline!"
+// }
