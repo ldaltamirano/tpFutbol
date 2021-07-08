@@ -29,3 +29,4 @@ window.addEventListener('online', event => {
 //   document.querySelector('body').classList.add('offline');
 //   main.innerHTML = "No obtener los partidos! La aplicacion esta offline!"
 // }
+
