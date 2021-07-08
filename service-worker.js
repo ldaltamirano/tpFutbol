@@ -23,9 +23,7 @@ self.addEventListener('install', event => {
 
 
 self.addEventListener('activate', event => {
-
   const cacheWhitelist = [cacheName];
-
   event.waitUntil(
      
       caches.keys().then(cacheNames => {
