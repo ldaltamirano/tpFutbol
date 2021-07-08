@@ -4,7 +4,9 @@ const precache = [
   './js/register-sw.js',
   './index.html',
   './offline.html',
-  './images/header.png'
+  './images/header.png',
+  './css/bootstrap.png',
+  './css/styles.png'
 ];
 
 
