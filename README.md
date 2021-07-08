@@ -1,11 +1,5 @@
-# PWA Boilerplate
+Altamirano Lucio
 
-## Installation
+PWA 1A2021
 
-- Clone the Repo
-- Modify the structure as your needs
-- Add your manifest.json
-
-## Under the hood:
-- Bootstrap
-- Service Worker
+El camino elegido es el del futbol.
