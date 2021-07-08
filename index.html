@@ -1,23 +1,115 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="images/header.png" />
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 
-    <title>Hello, world!</title>
+    <title>FDL - Futbol de Lunes</title>
   </head>
   <body>
-    <h1 class="alert-success">Hello, world!</h1>
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top">FDL</a>
+            <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#home">Home</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#current">Mis partidos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--PAgina 2-->
+
+    <div id="current" data-role="page" class="container-fluid"> 
+      <div id="current-section" class="hidden">
+        <header class="row bg-primary text-white text-center">
+          <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid mb-5" src="images/header.png" alt="futbol header" />
+              <!-- Masthead Heading-->
+              <h1 class="masthead-heading text-uppercase mb-0">futbol de lunes</h1>
+              
+          </div>
+        </header>
+        <section class="page-section matches">
+          <div class="container">
+              <!-- Portfolio Section Heading-->
+              <h2 class="page-section-heading text-center text-uppercase text-secondary" id="current-title"></h2>
+              <div class="row justify-content-center" id="current-match">
+              </div>
+          </div>
+        </section>
+      </div>
+      <header class="bg-primary text-white text-center row" id="current-header">
+        <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid mb-5" src="images/header.png" alt="futbol header" />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">futbol de lunes</h1>
+            <!-- Cambiar division-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">No se ha seleccionado ningun partido</p>
+        </div>
+      </header>
+    </div>
+
+    <!--PAgina 1-->
+
+    <div id="home" data-role="page" class="container-fluid"> 
+      <header class="row bg-primary text-white text-center">
+        <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid mb-5" src="images/header.png" alt="futbol header" />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">futbol de lunes</h1>
+            <!-- Cambiar division-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">LOs ultimos partidos jugados al alcance de un click</p>
+        </div>
+      </header>
+      <section class="page-section matches" id="matches">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary">Ultimos partidos</h2>
+            <div class="row justify-content-center" id="lastMatches">
+                <!-- <div class="col-md-6 col-lg-4 mb-5">
+                  <div class="thumbnail">
+                    <img data-src="holder.js/300x200" alt="300x200" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAAD6CAYAAABamQdMAAAPdElEQVR4Xu3cB2/cVhYFYDq9F6Q3IA3pPfn/vyC9x+m9O70XLw6BJ3CZkaUdS4H26COwsNejmeH97s0h9YacE6dOnTo92QgQIECgSuCEcK/qp2IIECAwCwh3g0CAAIFCAeFe2FQlESBAQLibAQIECBQKCPfCpiqJAAECwt0MECBAoFBAuBc2VUkECBAQ7maAAAEChQLCvbCpSiJAgIBwNwMECBAoFBDuhU1VEgECBIS7GSBAgEChgHAvbKqSCBAgINzNAAECBAoFhHthU5VEgAAB4W4GCBAgUCgg3AubqiQCBAgIdzNAgACBQgHhXthUJREgQEC4mwECBAgUCgj3wqYqiQABAsLdDBAgQKBQQLgXNlVJBAgQEO5mgAABAoUCwr2wqUoiQICAcDcDBAgQKBQQ7oVNVRIBAgSEuxkgQIBAoYBwL2yqkggQICDczQABAgQKBYR7YVOVRIAAAeFuBggQIFAoINwLm6okAgQICHczQIAAgUIB4V7YVCURIEBAuJsBAgQIFAoI98KmKokAAQLC3QwQIECgUEC4FzZVSQQIEBDuZoAAAQKFAsK9sKlKIkCAgHA3AwQIECgUEO6FTVUSAQIEhLsZIECAQKGAcC9sqpIIECAg3M0AAQIECgWEe2FTlUSAAAHhbgYIECBQKCDcC5uqJAIECAh3M0CAAIFCAeFe2FQlESBAQLibAQIECBQKCPfCpiqJAAECwt0MECBAoFBAuBc2VUkECBAQ7maAAAEChQLCvbCpSiJAgIBwNwMECBAoFBDuhU1VEgECBIS7GSBAgEChgHAvbKqSCBAgINzNAAECBAoFhHthU5VEgAAB4W4GCBAgUCgg3AubqiQCBAgIdzNAgACBQgHhXthUJREgQEC4mwECBAgUCgj3wqYqiQABAsLdDBAgQKBQQLgXNlVJBAgQEO5mgAABAoUCwr2wqUoiQICAcDcDBAgQKBQQ7oVNVRIBAgSEuxkgQIBAoYBwL2yqkggQICDczQABAgQKBYR7YVOVRIAAAeFuBggQIFAoINwLm6okAgQICHczQIAAgUIB4V7YVCURIEBAuJsBAgQIFAoI98KmKokAAQLC3QwQIECgUEC4FzZVSQQIEBDuZoAAAQKFAsK9sKlKIkCAgHA3AwQIECgUEO6FTVUSAQIEhLsZIECAQKGAcC9sqpIIECAg3M0AAQIECgWEe2FTlUSAAAHhbgYIECBQKCDcC5uqJAIECAh3M0CAAIFCAeFe2FQlESBAQLibAQIECBQKCPfCpiqJAAECwt0MECBAoFBAuBc2VUkECBAQ7maAAAEChQLCvbCpSiJAgIBwNwMECBAoFBDuhU1VEgECBIS7GSBAgEChgHAvbKqSCBAgINzNAAECBAoFhHthU5VEgAAB4W4GCBAgUCgg3AubqiQCBAgIdzNAgACBQgHhXtjUf7OkX3/9dXrjjTemb775Zvrzzz+nEydOTBdccMF08803T3fcccd0zjnn/GN3/v777+ndd9+dPvnkk+n333+fTp8+PZ1//vnT9ddfP919993z3zdtX3311fTWW29NP//885TXyGtfeeWV83Py50Ft33333fw++TPvk5qyT9ddd92u+/fHH3/Mz/niiy+m/D1bHG655ZYDdzioOr1Ot4Bw7+7voVb37bffTi+99NL022+/bXyfq6++enrsscemc889d+fxv/76a3rhhRemU6dObXzOpZdeOj/n4osv/q/H33nnnem9996bw3a95fXvu+++6aabbjrres/0Pnnxiy66aHrkkUemK664Yue9fvnll7mmH3/88dAdzrpAL3BsBIT7sWn1wRaakH722Wfns9szbbfddtt077337vxIztgToDlb32275ppr5oDPGXO277//fnr++efns/zdtgsvvHB6/PHHp8suu2zrQr/88svp5ZdfnlLbmbb1QevVV1+dfws5bIetC/PEYykg3I9l28++6CyR5Kw9QZgQvvXWW+cli5zFvvjii/PSSbaE7ZNPPjkva2S54umnn55++umn+bFLLrlkPgtOML/22mvzkka2/Gz+PSGaLY99/PHH899zln7PPffMZ+kfffTR9Pbbb++EcZaB7rrrrq2Ly36Pfcj73HnnnVMOTll6euWVV3YOZHns4Ycfnq699tr5bD0HuXHgyT4/9NBD88ErPuPgl99Ennjiifk3km0dti7ME4+lgHA/lm0/+6I///zzeZkkYZ5wTnDlz2wJwk8//XT+e5ZZEu5Zf14eELJenjP6rElnW4dkQjphnSB85plndpY8su796KOPzs9JgD733HM7SzxXXXXV/F4J1AT1CNwEas7qczDJ9uabb07vv//+/PccmG6//fY5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" style="width: 300px; height: 200px;">
+                    <div class="caption">
+                      <h3 class="tex">Thumbnail label</h3>
+                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <p><a href="#" class="btn btn-primary">Action</a> <a href="#" class="btn">Action</a></p>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+        </div>
+      </section>
+    </div>
 
     <script src="js/register-sw.js"></script>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.4.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>

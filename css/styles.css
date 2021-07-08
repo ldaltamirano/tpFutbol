@@ -1,0 +1,98 @@
+* {
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+[data-role="page"] {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 2.5rem;
+}
+
+#home {
+    display: block;
+}
+
+#current:target ~ #home {
+    display: none !important;
+}
+
+[data-role="page"]:target {
+    display: block;
+}
+
+.withSaves {
+    display: flex !important;
+}
+
+.withoutSaves {
+    display: none !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.bg-primary {
+    background-color: #e5a200 !important;
+}
+
+.bg-secondary {
+    background-color: #0b3321 !important;
+}
+
+a {
+    color: #e5a200 !important;
+
+}
+
+#home header, #current header {
+    background-image: url("../images/header.wall.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home h1, #current h1 {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    font-size: 2.5em;
+    color: #0b3321 !important;
+}
+#home p, #current p {
+    padding-bottom: 2em;
+    font-size: 1.5em;
+    color: #0b3321 !important;
+
+}
+
+#matches h2, #current-title  {
+    background-color: #0b3321 !important;
+    color: #e5a200 !important;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    padding-bottom: 2em;
+    padding: 1em;
+}
+
+#msj-offline {
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.thumbnail img {
+    min-height: 240px;
+}
+
+.caption {
+    background-color: #0b3321 !important;
+    color: #e5a200 !important;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+.caption h3 {
+    font-size: 0.8em;
+}
